@@ -1,10 +1,47 @@
-<?php
-$currentPage = 'index';
-$title = 'Home - Stijn Clara';
-include('header.php');
-include('navbar.php');
-?>
+<!--<?php-->
+<!--$currentPage = 'index';-->
+<!--$title = 'Home - Stijn Clara';-->
+<!--include('header.php');-->
+<!--include('navbar.php');-->
+<!--?>-->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--    META TAGS VOOR GOOGLE SEO-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Stijn Clara</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Stijn Clara's Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item <?php echo ($currentPage == 'about') ? 'active' : ''; ?>">
+                <a class="nav-link" href="about.php">About</a>
+            </li>
+            <li class="nav-item <?php echo ($currentPage == 'portfolio') ? 'active' : ''; ?>">
+                <a class="nav-link" href="portfolio.php">Portfolio</a>
+            </li>
+            <li class="nav-item <?php echo ($currentPage == 'blog') ? 'active' : ''; ?>">
+                <a class="nav-link" href="blog.php">Blog</a>
+            </li>
+            <li class="nav-item <?php echo ($currentPage == 'contact') ? 'active' : ''; ?>">
+                <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<body>
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -149,4 +186,12 @@ include('navbar.php');
             </form>
         </div>
     </section>
-<?php include('footer.php') ?>
+<!--<?php include('footer.php') ?>-->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
